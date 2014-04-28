@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from sqlalchemy import create_engine
 
 engine = create_engine('sqlite:///:memory:', echo=True)
@@ -11,19 +11,19 @@ app.debug = True
 
 @app.route("/")
 def home():
-    return "Skill Camp!"
+    return render_template('index.html')
 
 @app.route("/create")
 def create():
-    return "Make a new thing!"
+    return render_template('create.html')
 
 @app.route("/<int:uid>/view")
 def view(uid):
-    return "Look at %d" % (uid,)
+    return render_template('view.html', uid=uid)
 
 @app.route("/<int:uid>/edit")
 def edit(uid):
-    return "I'm editing %d" % (uid,)
+    return render_template('edit.html', uid=uid)
 
 if __name__ == "__main__":
     app.run()

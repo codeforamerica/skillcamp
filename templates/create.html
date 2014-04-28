@@ -5,5 +5,43 @@
     </head>
     <body>
         <h1>Make a new thing!</h1>
+        <form method="POST" action="/">
+            {{ form.hidden_tag() }}<br>
+            {{ form.title.label }}<br> {{ form.title(size=80) }}<br>
+
+            {{ form.time.label }}<br> {{ form.time(size=40) }}<br>
+            {{ form.audience.label }}<br> {{ form.audience(size=40) }}<br>
+            {{ form.goals.label }}<br> {{ form.goals(size=40) }}<br>
+            {{ form.summary.label }}<br> {{ form.summary(size=40) }}<br>
+
+            {{ form.author_name.label }}<br> {{ form.author_name(size=40) }}<br>
+            {{ form.author_image.label }}<br> {{ form.author_image(size=40) }}<br>
+            {{ form.author_bio.label }}<br> {{ form.author_bio(size=40) }}<br>
+
+            <br><br>
+            {{ form.steps.label }}<br>
+            {% for step in form.steps %}
+                {{ step.hidden_tag() }}<br>
+                {{ step.title.label }}<br> {{ step.title(size=40) }}<br>
+                {{ step.body.label }}<br> {{ step.body(size=100)}}<br>
+            {% endfor %}
+
+            <br><br>
+            {{ form.assets.label }}<br>
+            {% for asset in form.assets %}
+                {{ asset.hidden_tag() }}<br>
+                {{ asset.title.label }}<br> {{ asset.title(size=40) }}<br>
+                {{ asset.url.label }}<br> {{ asset.url(size=100)}}<br>
+            {% endfor %}
+            
+            <br><br>
+            {{ form.resources.label }}<br>
+            {% for resource in form.resources %}
+                {{ resource.hidden_tag() }}<br>
+                {{ resource.title.label }}<br> {{ resource.title(size=40) }}<br>
+                {{ resource.url.label }}<br> {{ resource.url(size=100)}}<br>
+            {% endfor %}
+            <input type="submit" value="Go">
+        </form>
     </body>
 </html>

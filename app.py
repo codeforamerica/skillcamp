@@ -65,6 +65,10 @@ def view(uid):
     else:
         return "Not found", 404
 
+@app.route("/<int:uid>/viewit")
+def viewit(uid):
+    return render_template('view-itworks.html')
+
 @app.route("/<int:uid>/edit")
 def edit(uid):
     return render_template('edit.html', uid=uid)

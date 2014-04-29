@@ -92,11 +92,10 @@ p {
   background-image: url('../images/SC_assets.png');
 }
 .section-title.resources {
+  background-image: url('../images/SC-logo_resources.jpg');
+}
+.section-title.comments-sec {
   background-image: none;
-  background-position: 0% 0%;
-  background-size: auto;
-  background-repeat: repeat;
-  background-attachment: scroll;
 }
 .list {
   font-family: Montserrat, sans-serif;
@@ -179,4 +178,63 @@ p {
 }
 .link {
   color: #1b75bb;
+}
+.side-nav {
+  position: fixed;
+  text-align: center;
+}
+.on-this-page {
+  font-family:'Open Sans', sans-serif;
+  color: #833627;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.sn-link {
+  width: 181px;
+  height: 56px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-image: url('../images/SC_button_ataglance.png');
+  text-decoration: none;
+}
+.sn-link.assets-a {
+  background-image: url('../images/SC_button_assets.png');
+  background-repeat: no-repeat;
+}
+.sn-link.resources-a {
+  background-image: url('../images/SC_button_resources.png');
+  background-repeat: no-repeat;
+}
+.sn-link.comments-a {
+  background-image: url('../images/SC_button_comments.png');
+  background-repeat: no-repeat;
+}
+.sn-link.remix-a {
+  background-image: url('../images/SC_button_remix.png');
+  background-repeat: no-repeat;
+}
+.side-col {
+  text-align: center;
+}
+.at-a-glance-a {
+  height: 47px;
+  background-image: none;
+  background-position: 0% 0%;
+  background-size: auto;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  color: rgba(51, 51, 51, 0);
+}
+.at-a-glance-a.remix-bar {
+  padding-top: 41px;
+}
+.steps-a {
+  background-image: url('../images/SC_button_steps.png');
+  background-repeat: no-repeat;
+}
+.sn-list {
+  background-image: url('../images/SC_post.jpg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }

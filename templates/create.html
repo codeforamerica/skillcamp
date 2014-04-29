@@ -1,48 +1,117 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>SkillCamp</title>
-    </head>
-    <body>
-        <h1>Make a new thing!</h1>
-        <form method="POST" action="/create">
-            {{ form.hidden_tag() }}<br>
-            {{ form.title.label }}<br> {{ form.title(size=80) }}<br>
+<!-- This site was created in Webflow. http://www.webflow.com-->
+<!-- Last Published: Mon Apr 28 2014 23:17:58 GMT+0000 (UTC) -->
+<html data-wf-site="535945b28ac282013e000ec6">
+<head>
+  <meta charset="utf-8">
+  <title>skillcamp - Lesson</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Webflow">
+  <link rel="stylesheet" type="text/css" href="../static/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/webflow.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/skillcamp.webflow.css">
+  <link rel="stylesheet" type="text/css" href="../fonts/Haymaker/haymaker.css">
+  <script type="text/javascript" src="//use.typekit.net/gvp7wrm.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Montserrat:400,700","Bitter:400,700,400italic"]
+      }
+    });
+  </script>
+  <script type="text/javascript" src="https://use.typekit.net/gvp7wrm.js"></script>
+  <script type="text/javascript">
+    try{Typekit.load();}catch(e){}
+  </script>
+  <script type="text/javascript" src="js/modernizr.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="https://y7v4p6k4.ssl.hwcdn.net/placeholder/favicon.ico">
+</head>
+<body>
+  <div>
+    <div class="w-nav navbar" data-collapse="medium" data-animation="default" data-duration="400" data-contain="1">
+      <div class="w-container">
+        <a class="w-nav-brand w-clearfix" href="#">
+          <img class="brand-img" src="../static/images/SC_logo.png" alt="535ed4362f3955f46400039c_SC_logo.png">
+          <div class="brand-text">skill.camp</div>
+        </a>
+        <nav class="w-nav-menu" role="navigation"><a class="w-nav-link navlink new-lesson" href="#">New Lesson</a><a class="w-nav-link navlink browse-lesson" href="#">Browse Lesson</a>
+        </nav>
+        <div class="w-nav-button">
+          <div class="w-icon-nav-menu"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section-1">
+    <div class="w-container">
+      <div class="w-row">
+        <div class="w-col w-col-3"></div>
+        <div class="w-col w-col-9">
+          <h1>ENTER IT</h1>
+          <div class="w-clearfix profile-sec">
+            <img class="profile-img" src="../static/images/molly_author-18.jpg" width="98" alt="535edc72eb04acf664000361_molly_author-18.jpg">
+            <div class="profile-info">
+              <div class="profile-name p"><strong>Molly McLeod</strong>
+              </div>
+              <ul class="w-list-unstyled profile-list">
+                <li><a class="profile-link" href="#"><strong class="med-text">See all of Molly’s Lessons</strong></a>
+                </li>
+                <li><a class="profile-link" href="#">@mollyampersand</a>
+                </li>
+                <li><a class="profile-link" href="#">molly@codeforamerica.org</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="at-a-glance">
+<form method="POST" action="/create">
+    {{ form.hidden_tag() }}<br>
+    {{ form.title.label }} {{ form.title(size=80) }}<br><br><br>
 
-            {{ form.time.label }}<br> {{ form.time(size=40) }}<br>
-            {{ form.audience.label }}<br> {{ form.audience(size=40) }}<br>
-            {{ form.goals.label }}<br> {{ form.goals(size=40) }}<br>
-            {{ form.summary.label }}<br> {{ form.summary(size=40) }}<br>
+    {{ form.time.label }} {{ form.time(size=40) }}<br><br><br>
+    {{ form.audience.label }} {{ form.audience(size=40) }}<br><br><br>
+    {{ form.goals.label }} {{ form.goals(size=40) }}<br><br><br>
+    {{ form.summary.label }} {{ form.summary(size=40) }}<br><br><br>
 
-            {{ form.author_name.label }}<br> {{ form.author_name(size=40) }}<br>
-            {{ form.author_image.label }}<br> {{ form.author_image(size=40) }}<br>
-            {{ form.author_bio.label }}<br> {{ form.author_bio(size=40) }}<br>
+    {{ form.author_name.label }} {{ form.author_name(size=40) }}<br><br><br>
+    {{ form.author_image.label }} {{ form.author_image(size=40) }}<br><br><br>
+    {{ form.author_bio.label }} {{ form.author_bio(size=40) }}<br><br><br>
 
-            <br><br>
-            {{ form.steps.label }}<br>
-            {% for step in form.steps %}
-                <b>Step number {{loop.index}}</b>
-                {{ step.hidden_tag() }}<br>
-                {{ step.title.label }}<br> {{ step.title(size=40) }}<br>
-                {{ step.body.label }}<br> {{ step.body(size=100)}}<br>
-            {% endfor %}
+    <br>
+    {{ form.steps.label }}<br>
+    {% for step in form.steps %}
+        <b>Step number {{loop.index}}</b>
+        {{ step.hidden_tag() }}<br><br><br>
+        {{ step.title.label }}<br><br><br> {{ step.title(size=40) }}<br><br><br>
+        {{ step.body.label }}<br><br><br> {{ step.body(size=100)}}<br><br><br><br>
+    {% endfor %}
 
-            <br><br>
-            {{ form.assets.label }}<br>
-            {% for asset in form.assets %}
-                {{ asset.hidden_tag() }}<br>
-                {{ asset.title.label }}<br> {{ asset.title(size=40) }}<br>
-                {{ asset.url.label }}<br> {{ asset.url(size=100)}}<br>
-            {% endfor %}
 
-            <br><br>
-            {{ form.resources.label }}<br>
-            {% for resource in form.resources %}
-                {{ resource.hidden_tag() }}<br>
-                {{ resource.title.label }}<br> {{ resource.title(size=40) }}<br>
-                {{ resource.url.label }}<br> {{ resource.url(size=100)}}<br>
-            {% endfor %}
-            <input type="submit" value="Go">
-        </form>
-    </body>
+    {{ form.assets.label }}<br>
+    {% for asset in form.assets %}
+        {{ asset.hidden_tag() }}<br>
+        {{ asset.title.label }} {{ asset.title(size=40) }}<br>
+        {{ asset.url.label }} {{ asset.url(size=100)}}<br>
+    {% endfor %}
+
+    <br><br>
+    {{ form.resources.label }}<br>
+    {% for resource in form.resources %}
+        {{ resource.hidden_tag() }}
+        {{ resource.title.label }} {{ resource.title(size=40) }}<br>
+        {{ resource.url.label }} {{ resource.url(size=100)}}<br>
+    {% endfor %}
+    <input type="submit" value="Go">
+</form>          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"></div>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script type="text/javascript" src="js/webflow.js"></script>
+  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+</body>
 </html>

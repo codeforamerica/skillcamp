@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'HaymakerRegular';
+    src: url('haymaker.eot');
+    src: url('haymaker.eot') format('embedded-opentype'),
+         url('haymaker.woff') format('woff'),
+         url('haymaker.ttf') format('truetype'),
+         url('haymaker.svg#HaymakerRegular') format('svg');
+}

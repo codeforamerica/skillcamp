@@ -5,7 +5,7 @@
     </head>
     <body>
         <h1>Make a new thing!</h1>
-        <form method="POST" action="/">
+        <form method="POST" action="/create">
             {{ form.hidden_tag() }}<br>
             {{ form.title.label }}<br> {{ form.title(size=80) }}<br>
 
@@ -21,6 +21,7 @@
             <br><br>
             {{ form.steps.label }}<br>
             {% for step in form.steps %}
+                <b>Step number {{loop.index}}</b>
                 {{ step.hidden_tag() }}<br>
                 {{ step.title.label }}<br> {{ step.title(size=40) }}<br>
                 {{ step.body.label }}<br> {{ step.body(size=100)}}<br>
@@ -33,7 +34,7 @@
                 {{ asset.title.label }}<br> {{ asset.title(size=40) }}<br>
                 {{ asset.url.label }}<br> {{ asset.url(size=100)}}<br>
             {% endfor %}
-            
+
             <br><br>
             {{ form.resources.label }}<br>
             {% for resource in form.resources %}

@@ -238,3 +238,100 @@ p {
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
+.callout-sec {
+  max-height: 237px;
+  margin-top: 10px;
+  padding-top: 37px;
+  background-color: #1b75bb;
+}
+.callout-h1 {
+  color: white;
+  font-size: 51px;
+  line-height: 1.3em;
+}
+.hero-map {
+  width: 100%;
+  margin-top: -32px;
+}
+.lessons-sec {
+  padding-top: 48px;
+}
+.home-h2 {
+  font-family:'Open Sans', sans-serif;
+  color: #833627;
+}
+.home-link {
+  font-family:'Open Sans', sans-serif;
+  color: #1b75bb;
+  font-size: 20px;
+  line-height: 1.2em;
+  font-weight: 700;
+}
+.home-link:hover {
+  color: #359ed8;
+}
+.home-link.more {
+  color: #359ed8;
+}
+.home-list {
+  font-size: 18px;
+  line-height: 1.8em;
+}
+.make-button {
+  margin-top: 44px;
+  margin-bottom: 30px;
+  font-family:'Open Sans', sans-serif;
+  font-size: 28px;
+  text-align: center;
+}
+.footer-link {
+  padding-right: 0px;
+  font-family:'Open Sans', sans-serif;
+  color: #833627;
+  font-size: 16px;
+  line-height: 2em;
+  font-weight: 700;
+}
+.dot {
+  display: inline-block;
+  padding-right: 8px;
+  padding-left: 8px;
+  font-family:'Open Sans', sans-serif;
+  color: #833627;
+  font-size: 18px;
+  font-weight: 800;
+}
+.footer-text {
+  font-family:'Open Sans', sans-serif;
+  color: #833627;
+  font-size: 16px;
+}
+.callout-link {
+  padding-right: 23px;
+  font-family:'Open Sans', sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+}
+.footer {
+  padding-top: 14px;
+  padding-bottom: 25px;
+  background-color: rgba(131, 54, 39, 0.14);
+}
+@media (max-width: 991px) {
+  .callout-h1 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .hero-map {
+    display: none;
+  }
+}
+@media (max-width: 479px) {
+  .brand-text {
+    font-size: 22px;
+  }
+  .callout-h1 {
+    font-size: 28px;
+  }
+}

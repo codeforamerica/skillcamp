@@ -1,12 +1,16 @@
 from flask import Flask, render_template, request, redirect, url_for
 from sqlalchemy import create_engine
+import os
 
-engine = create_engine('sqlite:///foo.db', echo=True)
+db_connection = os.environ['DATABASE_URL']
+
+#engine = create_engine('sqlite:///foo.db', echo=True)
+engine = create_engine(db_connection)
+
 
 from sqlalchemy.orm import sessionmaker
 Session = sessionmaker(bind=engine)
 session = Session()
-
 
 app = Flask(__name__)
 app.debug = True
@@ -20,7 +24,7 @@ app.secret_key = 'M\x97\xca\x83{\xcf\xf7Z: JF\x96\x19\xc6\x86\xe0|\x97\x94\xa9\x
 from forms import LessonForm
 from models import Base, Lesson, Step
 
-Base.metadata.create_all(engine) 
+Base.metadata.create_all(engine)
 # Our Routes
 
 @app.route("/")

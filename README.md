@@ -14,5 +14,13 @@ Code for America fellows undergo intense training in January before they head to
 == Step 1: Install dependencies ==
 ' sudo pip install -r requirements.txt
 
-== Step 2: Run app ==
+== Step 2: Set up local database ==
+You'll need to set up a local postgres database.
+
+Then define an environmental variable with your database string.
+' export DATABASE_URL=postgres://username:password
+@hostname:5432/databasename
+
+
+== Step 3: Run app ==
 ' python app.py

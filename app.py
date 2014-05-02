@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, redirect, url_for
 from sqlalchemy import create_engine
 import os
 
+# get environmental variable for database connection.
+# If you're running this locally, check the README for more info
 db_connection = os.environ['DATABASE_URL']
 
 #engine = create_engine('sqlite:///foo.db', echo=True)
@@ -19,7 +21,6 @@ app.secret_key = 'M\x97\xca\x83{\xcf\xf7Z: JF\x96\x19\xc6\x86\xe0|\x97\x94\xa9\x
 # TODO
 # - Correct validators
 # - Add/remove fields
-# - Database make it go
 
 from forms import LessonForm
 from models import Base, Lesson, Step

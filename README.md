@@ -43,7 +43,13 @@ CREATE ROLE
 maya=# CREATE DATABASE skillcamp OWNER=skillcamp;
 
 
-to run:
+## to run:
 1. source virtualenv
 2. DATABASE_URL
+3. python app.py
+
+=========
+## After all setup, do this to run it:
+1. source ENV/bin/activate
+2. export DATABASE_URL=postgres://skillcamp:skillcamp@localhost/skillcamp
 3. python app.py

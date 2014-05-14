@@ -49,24 +49,18 @@
       <div class="w-row">
         <div class="w-col w-col-3"></div>
         <div class="w-col w-col-9">
-          <h1>ENTER IT</h1>
-          <div class="w-clearfix profile-sec">
-            <img class="profile-img" src="../static/images/molly_author-18.jpg" width="98" alt="535edc72eb04acf664000361_molly_author-18.jpg">
-            <div class="profile-info">
-              <div class="profile-name p"><strong>Molly McLeod</strong>
-              </div>
-              <ul class="w-list-unstyled profile-list">
-                <li><a class="profile-link" href="#"><strong class="med-text">See all of Molly’s Lessons</strong></a>
-                </li>
-                <li><a class="profile-link" href="#">@mollyampersand</a>
-                </li>
-                <li><a class="profile-link" href="#">molly@codeforamerica.org</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <h1>Create a Lesson</h1>
           <div class="at-a-glance">
+            <h2>Personal Info</h2>
+            <br>
 <form method="POST" action="/create">
+  {{ form.author_name.label }} {{ form.author_name(size=40) }}<br><br><br>
+  {{ form.author_image.label }} {{ form.author_image(size=40) }}<br><br><br>
+  {{ form.author_bio.label }} {{ form.author_bio(size=40) }}<br><br><br>
+
+  <hr />
+
+<h2>Lesson Information</h2>
     {{ form.hidden_tag() }}<br>
     {{ form.title.label }} {{ form.title(size=80) }}<br><br><br>
 
@@ -75,21 +69,21 @@
     {{ form.goals.label }} {{ form.goals(size=40) }}<br><br><br>
     {{ form.summary.label }} {{ form.summary(size=40) }}<br><br><br>
 
-    {{ form.author_name.label }} {{ form.author_name(size=40) }}<br><br><br>
-    {{ form.author_image.label }} {{ form.author_image(size=40) }}<br><br><br>
-    {{ form.author_bio.label }} {{ form.author_bio(size=40) }}<br><br><br>
+<hr />
+
 
     <br>
-    {{ form.steps.label }}<br>
+  <h2>  {{ form.steps.label }}</h2><br>
     {% for step in form.steps %}
         <b>Step number {{loop.index}}</b>
         {{ step.hidden_tag() }}<br><br><br>
         {{ step.title.label }}<br><br><br> {{ step.title(size=40) }}<br><br><br>
         {{ step.body.label }}<br><br><br> {{ step.body(size=100)}}<br><br><br><br>
     {% endfor %}
+<a href="#">Add another step!</a>
+<hr />
 
-
-    {{ form.assets.label }}<br>
+  <h2>  {{ form.assets.label }}</h2><br>
     {% for asset in form.assets %}
         {{ asset.hidden_tag() }}<br>
         {{ asset.title.label }} {{ asset.title(size=40) }}<br>
@@ -97,7 +91,7 @@
     {% endfor %}
 
     <br><br>
-    {{ form.resources.label }}<br>
+  <h2>  {{ form.resources.label }}</h2><br>
     {% for resource in form.resources %}
         {{ resource.hidden_tag() }}
         {{ resource.title.label }} {{ resource.title(size=40) }}<br>

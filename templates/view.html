@@ -10,9 +10,7 @@
   <link rel="stylesheet" type="text/css" href="../static/css/normalize.css">
   <link rel="stylesheet" type="text/css" href="../static/css/webflow.css">
   <link rel="stylesheet" type="text/css" href="../static/css/skillcamp.webflow.css">
-  <link rel="stylesheet" type="text/css" href="../fonts/Haymaker/haymaker.css">
-	<script type="text/javascript" src="//use.typekit.net/gvp7wrm.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <link rel="stylesheet" type="text/css" href="../static/fonts/Haymaker/haymaker.css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
   <script>
     WebFont.load({
@@ -21,11 +19,8 @@
       }
     });
   </script>
-  <script type="text/javascript" src="https://use.typekit.net/gvp7wrm.js"></script>
-  <script type="text/javascript">
-    try{Typekit.load();}catch(e){}
-  </script>
-  <script type="text/javascript" src="js/modernizr.js"></script>
+
+  <script type="text/javascript" src="/static/js/modernizr.js"></script>
   <link rel="shortcut icon" type="image/x-icon" href="https://y7v4p6k4.ssl.hwcdn.net/placeholder/favicon.ico">
 </head>
 <body>
@@ -47,7 +42,43 @@
   <div class="section-1">
     <div class="w-container">
       <div class="w-row">
-        <div class="w-col w-col-3"></div>
+        <div class="w-col w-col-3 side-col">
+          <div class="side-nav">
+            <div class="on-this-page">On this page</div>
+            <ul class="w-list-unstyled sn-list">
+              <li class="sn-link at-a-glance-a">
+                <a class="w-inline-block" href="#at-a-glance">
+                  <img src="../static/images/SC_button_ataglance.png" alt="535eea3313322e38680004fb_SC_button_ataglance.png">
+                </a>
+              </li>
+              <li class="sn-link at-a-glance-a">
+                <a class="w-inline-block -wfp-hover" href="#steps">
+                  <img src="../static/images/SC_button_steps.png" alt="535eeab3d5d3ba3b6800044e_SC_button_steps.png">
+                </a>
+              </li>
+              <li class="sn-link at-a-glance-a">
+                <a class="w-inline-block" href="#assets">
+                  <img src="../static/images/SC_button_assets.png" alt="535eead6d5d3ba3b68000451_SC_button_assets.png">
+                </a>
+              </li>
+              <li class="sn-link at-a-glance-a">
+                <a class="w-inline-block" href="#resources">
+                  <img src="../static/images/SC_button_resources.png" alt="535eeae7d5d3ba3b68000453_SC_button_resources.png">
+                </a>
+              </li>
+              <li class="sn-link at-a-glance-a">
+                <a class="w-inline-block" href="#comments">
+                  <img src="../static/images/SC_button_comments.png" alt="535eeb27eb04acf6640003c4_SC_button_comments.png">
+                </a>
+              </li>
+              <li class="sn-link at-a-glance-a remix-bar">
+                <a class="w-inline-block" href="#">
+                  <img src="../static/images/SC_button_remix.png" alt="535eeb57d5d3ba3b68000456_SC_button_remix.png">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
         <div class="w-col w-col-9">
           <h1>{{lesson.title}}</h1>
           <div class="w-clearfix profile-sec">
@@ -65,7 +96,7 @@
               </ul>
             </div>
           </div>
-          <div class="at-a-glance">
+          <div id="at-a-glance" class="at-a-glance">
             <h2 class="section-title at-a-glance-h2">At a glance</h2>
             <h3>{{lesson.summary}}</h3>
             <ul class="list">
@@ -76,7 +107,7 @@
               <li><strong>Goals</strong>: {{lesson.goals}}</li>
             </ul>
           </div>
-          <div class="lesson">
+          <div id="steps" class="lesson">
             <h2 class="section-title steps-h2">Steps</h2>
             
             {% for step in lesson.steps %}
@@ -87,7 +118,7 @@
             {% endfor %}
 
           </div>
-          <div class="asset-block">
+          <div id="assets" class="asset-block">
             <h2 class="section-title assets-h2">Assets</h2>
             <div class="p"><strong>Slides</strong>&nbsp;[<a href="#" class="link">PDF</a>, <a href="#" class="link">Keynote</a>]</div>
             <ul class="p">
@@ -98,7 +129,7 @@
             </ul>
             <div class="p"><strong>Handout</strong>&nbsp;[<a href="#" class="link">PDF</a>, <a href="#" class="link">Illustrator file</a>]</div>
           </div>
-          <div class="asset-block">
+          <div id="resources" class="asset-block">
             <h2 class="section-title resources">Resources</h2>
             <div class="p"><strong>Typography</strong>
             </div>
@@ -126,13 +157,17 @@
               </li>
             </ul>
           </div>
+		    <section id="comments">
+		    <h2 class="section-title comments-sec">Comments</h2>
+		      <a class="muut" href="https://muut.com/i/skillcamp/comments:thread-id">Comments</a>
+		    </section> 
         </div>
       </div>
     </div>
   </div>
   <div class="footer"></div>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script type="text/javascript" src="js/webflow.js"></script>
+  <script type="text/javascript" src="/static/js/webflow.js"></script>
   <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
 </body>
 </html>

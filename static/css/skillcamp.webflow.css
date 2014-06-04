@@ -125,7 +125,7 @@ p {
   background-repeat: no-repeat;
   font-family:'Open Sans', sans-serif;
   color: white;
-  font-size: 17px;
+  font-size: 16px;
 }
 .navlink.new-lesson {
   margin-top: 44px;
@@ -238,6 +238,7 @@ p {
   background-image: url('../images/SC_post.jpg');
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  padding-top: 15px;
 }
 .callout-sec {
   max-height: 237px;
@@ -318,6 +319,83 @@ p {
   padding-bottom: 25px;
   background-color: rgba(131, 54, 39, 0.14);
 }
+
+.arrow_box.step1 {
+    transform: rotate(-2deg);
+    -webkit-transform: rotate(-2deg);
+}
+.arrow_box.step2 {
+    margin: 19px 29px;
+    transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+}
+.arrow_box.step3 {
+    margin: 21px 26px;
+    transform: rotate(-2deg);
+    -webkit-transform: rotate(-2deg);
+}
+.arrow_box.step4 {
+    margin: 20px 10px;
+    transform: rotate(1deg);
+    -webkit-transform: rotate(1deg);
+}
+.arrow_box.step5 {
+    margin: 20px 16px;
+    transform: rotate(-1deg);
+    -webkit-transform: rotate(-1deg);
+}
+.arrow_box {
+    background: none repeat scroll 0 0 #833627;
+    color: #FFFFFF;
+    font-family: HaymakerRegular,Bitter,serif;
+    font-size: 21px;
+    height: 46px;
+    line-height: 42px;
+    position: relative;
+}
+.arrow_box:hover {
+	color: #833627;
+	border-right: none;
+}
+.arrow_box:hover a {
+	color: #833627;
+}
+.arrow_box:after, .arrow_box:before { 
+	left: 100%; 
+	top: 50%; 
+	border: solid transparent; 
+	content: " "; 
+	height: 0; 
+	width: 0; 
+	position: absolute; 
+	pointer-events: none; 
+} 
+.arrow_box:hover:after, .arrow_box:hover:before { 
+	left: 100%; 
+}
+
+.arrow_box:after {
+    border-color: rgba(136, 183, 213, 0) rgba(136, 183, 213, 0) rgba(136, 183, 213, 0) #833627;
+    border-width: 15px 16px 15px 7px;
+    margin-top: -15px;
+}
+
+.arrow_box:before {
+    border-color: rgba(194, 225, 245, 0) rgba(194, 225, 245, 0) rgba(194, 225, 245, 0) #833627;
+    border-width: 23px 24px 23px 11px;
+    margin-top: -23px;
+}
+.arrow_box:hover:after { 
+}
+.arrow_box a {
+    color: #FFFFFF;
+    line-height: 49px;
+    padding: 11px 13px 8px;
+    text-decoration: none;
+}
+.arrow_box a:hover {background: #fff; color: #833627;}
+.arrow_box .w--current {background-color: #fff; color: #833627;}
+
 @media (max-width: 991px) {
   .callout-h1 {
     font-size: 40px;

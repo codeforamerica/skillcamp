@@ -260,7 +260,7 @@ p {
   margin-top: -32px;
 }
 .lessons-sec {
-  padding-top: 48px;
+  padding: 48px 0;
 }
 .home-h2 {
   font-family:'Open Sans', sans-serif;

@@ -50,40 +50,41 @@
         <div class="w-col w-col-3"></div>
         <div class="w-col w-col-9">
           <h1>Create a Lesson</h1>
-          <div class="at-a-glance">
+          <div class="">
+<section class="create-sec">          
             <h2>Personal Info</h2>
             <br>
 <form method="POST" action="/create">
-  {{ form.author_name.label }} {{ form.author_name(size=40) }}<br><br><br>
-  {{ form.author_image.label }} {{ form.author_image(size=40) }}<br><br><br>
-  {{ form.author_bio.label }} {{ form.author_bio(size=40) }}<br><br><br>
 
-  <hr />
+  {{ form.author_name.label }} {{ form.author_name(size=40) }}
+  {{ form.author_image.label }} {{ form.author_image(size=40) }}
+  {{ form.author_bio.label }} {{ form.author_bio(size=40) }}
+</section>
 
-<h2>Lesson Information</h2>
+<section class="create-sec">
+<h2 class="section-title">Lesson Information</h2>
     {{ form.hidden_tag() }}<br>
-    {{ form.title.label }} {{ form.title(size=80) }}<br><br><br>
+    {{ form.title.label }} {{ form.title(size=80) }}
 
-    {{ form.time.label }} {{ form.time(size=40) }}<br><br><br>
-    {{ form.audience.label }} {{ form.audience(size=40) }}<br><br><br>
-    {{ form.goals.label }} {{ form.goals(size=40) }}<br><br><br>
-    {{ form.summary.label }} {{ form.summary(size=40) }}<br><br><br>
+    {{ form.time.label }} {{ form.time(size=40) }}
+    {{ form.audience.label }} {{ form.audience(size=40) }}
+    {{ form.goals.label }} {{ form.goals(size=40) }}
+    {{ form.summary.label }} {{ form.summary(size=40) }}
+</section>
 
-<hr />
-
-
-    <br>
-  <h2>  {{ form.steps.label }}</h2><br>
+<section class="create-sec">
+  <h2 class="section-title steps-h2">  {{ form.steps.label }}</h2><br>
     {% for step in form.steps %}
-        <b>Step number {{loop.index}}</b>
-        {{ step.hidden_tag() }}<br><br><br>
-        {{ step.title.label }}<br><br><br> {{ step.title(size=40) }}<br><br><br>
-        {{ step.body.label }}<br><br><br> {{ step.body(size=100)}}<br><br><br><br>
+        <span class="step-number">Step number {{loop.index}}</span>
+        {{ step.hidden_tag() }}
+        {{ step.title.label }} {{ step.title(size=40) }}
+        {{ step.body.label }} {{ step.body(size=100)}}<br>
     {% endfor %}
-<a href="#">Add another step!</a>
-<hr />
+<a class="add-step-btn" href="#">+ Add another step!</a>
+</section>
 
-  <h2>  {{ form.assets.label }}</h2><br>
+<section class="create-sec">
+  <h2 class="section-title assets-h2">  {{ form.assets.label }}</h2><br>
     {% for asset in form.assets %}
         {{ asset.hidden_tag() }}<br>
         {{ asset.title.label }} {{ asset.title(size=40) }}<br>
@@ -91,13 +92,15 @@
     {% endfor %}
 
     <br><br>
-  <h2>  {{ form.resources.label }}</h2><br>
+  <h2 class="section-title resources">  {{ form.resources.label }}</h2><br>
     {% for resource in form.resources %}
         {{ resource.hidden_tag() }}
         {{ resource.title.label }} {{ resource.title(size=40) }}<br>
         {{ resource.url.label }} {{ resource.url(size=100)}}<br>
     {% endfor %}
-    <input type="submit" value="Go">
+    <input class="submit-btn" type="submit" value="Submit my lesson!">
+</section>    
+    
 </form>          </div>
         </div>
       </div>

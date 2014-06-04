@@ -173,6 +173,7 @@ p {
 }
 .profile-link {
   font-family:'Open Sans', sans-serif;
+  font-weight: 600;
   color: #1b75bb;
 }
 .profile-info {

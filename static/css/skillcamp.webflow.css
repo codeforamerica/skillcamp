@@ -93,10 +93,14 @@ p {
   background-image: url('../images/SC_assets.png');
 }
 .section-title.resources {
-  background-image: url('../images/SC-logo_resources.jpg');
+  background-image: url('../images/SC-logo_resources.png');
 }
 .section-title.comments-sec {
-  background-image: none;
+  background-image: url('../images/SC_comments.png');
+}
+.section-title.personal-h2 {
+  background-image: url('../images/SC_clipboard.png');
+  background-size: 46px auto;
 }
 .list {
   font-family: Montserrat, sans-serif;

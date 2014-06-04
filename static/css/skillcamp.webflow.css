@@ -263,24 +263,24 @@ p {
 .lessons-sec {
   padding: 48px 0;
 }
-.home-h2 {
+.lesson-h2 {
   font-family:'Open Sans', sans-serif;
   color: #833627;
 }
-.home-link {
+.lesson-link {
   font-family:'Open Sans', sans-serif;
   color: #1b75bb;
   font-size: 20px;
   line-height: 1.2em;
   font-weight: 700;
 }
-.home-link:hover {
+.lesson-link:hover {
   color: #359ed8;
 }
-.home-link.more {
+.lesson-link.more {
   color: #359ed8;
 }
-.home-list {
+.lesson-list {
   font-size: 18px;
   line-height: 1.8em;
 }

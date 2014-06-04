@@ -456,7 +456,7 @@ input:hover, input:focus {border-color: #1B75BB;}
     background-image: url("../images/SC_new_button_home.png");
     padding: 11px 18px;
 }
-.callout-link:hover {
+.callout-link:hover, .navlink:hover {
 opacity: .9;
 } 
 @media (max-width: 991px) {

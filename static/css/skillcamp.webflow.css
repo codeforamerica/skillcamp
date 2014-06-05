@@ -176,6 +176,10 @@ p {
   font-weight: 600;
   color: #1b75bb;
 }
+.profile-link:hover {
+	color: #359ED8;
+}
+
 .profile-info {
   margin: 0px;
 }
@@ -349,10 +353,10 @@ p {
     transform: rotate(1deg);
     -webkit-transform: rotate(1deg);
 }
-.arrow_box.step5 {
-    margin: 20px 16px;
+.step5 {
+    margin: 20px 13px;
     transform: rotate(-1deg);
-    -webkit-transform: rotate(-1deg);
+    width: 154px;
 }
 .arrow_box {
     background: none repeat scroll 0 0 #833627;
@@ -421,7 +425,7 @@ input:hover, input:focus, textarea:hover, textarea:focus {border-color: #1B75BB;
 textarea {
     transition: all 0s ease 0s, all 0.75s ease 0s;	
 }
-textarea:focus {width: 75%; height: 200px;}
+.create textarea:focus {width: 75%; height: 200px;}
 .submit-btn {
     background: none repeat scroll 0 0 #833627;
     border: medium none;

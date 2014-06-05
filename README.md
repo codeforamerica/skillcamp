@@ -11,25 +11,20 @@ Initial use case:
 Code for America fellows undergo intense training in January before they head to their host cities in February. While in their cities in Feb, Code for America fellows have an opportunity to give presentations. Skill Camp is a tool to allow fellows to more easily give presentations by providing documentation from the original presenter.
 
 ## Running the code locally
-### Step 1: Install dependencies
-``` bash
-sudo pip install -r requirements.txt
-```
 
-### Step 2: Set up local database
-You'll need to set up a local postgres database.
+Skillcamp is a Python Flask application.
 
-Then define an environmental variable with your database string.
+1.  Get started by [preparing your Python environment](https://github.com/codeforamerica/howto/blob/master/Python-Virtualenv.md) and installing [dependencies from `requirements.txt`](https://github.com/codeforamerica/howto/blob/master/Python-Virtualenv.md#install-packages).
+2.  Next, prepare a [local PostgreSQL database](https://github.com/codeforamerica/howto/blob/master/PostgreSQL.md).
+3.  Skillcamp uses the environment variable `DATABASE_URL` to connect to PostgreSQL; it will look something like this:
+    
+        postgres://username:password@hostname:5432/databasename
 
-```
- export DATABASE_URL=postgres://username:password @hostname:5432/databasename
-```
+### Run app
 
-### Step 3: Run app
+When testing, run the application like this:
 
-``` bash
-python app.py
-```
+    $ DATABASE_URL=postgres://username:password@hostname:5432/databasename python app.py
 
 =========
 1. setup python/pip/virtualenv

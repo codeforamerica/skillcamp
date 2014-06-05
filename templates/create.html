@@ -80,16 +80,17 @@
         {{ step.title.label }} {{ step.title(size=40) }}
         {{ step.body.label }} {{ step.body(size=100)}}<br>
     {% endfor %}
-<a class="add-step-btn" href="#">+ Add another step!</a>
+<a class="add-step-btn" href="#">+ Add a step!</a>
 </section>
 
 <section class="create-sec">
-  <h2 class="section-title assets-h2">  {{ form.assets.label }}</h2><br>
+  <h2 class="section-title assets-h2">  {{ form.assets.label }}</h2>
     {% for asset in form.assets %}
         {{ asset.hidden_tag() }}<br>
         {{ asset.title.label }} {{ asset.title(size=40) }}<br>
         {{ asset.url.label }} {{ asset.url(size=100)}}<br>
     {% endfor %}
+<a class="add-step-btn" href="#">+ Add an asset!</a>
 
     <br><br>
   <h2 class="section-title resources">  {{ form.resources.label }}</h2><br>
@@ -98,6 +99,8 @@
         {{ resource.title.label }} {{ resource.title(size=40) }}<br>
         {{ resource.url.label }} {{ resource.url(size=100)}}<br>
     {% endfor %}
+<a class="add-step-btn resource" href="#">+ Add a resource!</a>
+
     <input class="submit-btn" type="submit" value="Submit my lesson!">
 </section>    
     

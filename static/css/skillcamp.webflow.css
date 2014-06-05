@@ -408,15 +408,20 @@ p {
 
 .at-a-glance #summary {height: 63px;}
 .at-a-glance #summary:focus {height: 100px; width: 100%;}
-input {
+input, textarea {
     border: 2px solid #A3C7E4;
+    font-size: 16px;
     line-height: normal;
     margin-bottom: 11px;
     padding: 4px 3px;
     transition: all 0s ease 0s, all 0.25s ease 0s;
     width: 360px;
 }
-input:hover, input:focus {border-color: #1B75BB;}
+input:hover, input:focus, textarea:hover, textarea:focus {border-color: #1B75BB;}
+textarea {
+    transition: all 0s ease 0s, all 0.75s ease 0s;	
+}
+textarea:focus {width: 75%; height: 200px;}
 .submit-btn {
     background: none repeat scroll 0 0 #833627;
     border: medium none;
@@ -427,15 +432,24 @@ input:hover, input:focus {border-color: #1B75BB;}
     padding: 10px;
     width: 30%;
 }
-.submit-btn:hover {opacity: .8;}
 .add-step-btn {
     background-image: url("../images/SC_browse_button.png");
     color: #FFFFFF;
+    display: block;
     font-family: montserrat;
     font-size: 13px;
     font-weight: 600;
-    padding: 8px;
+    padding: 9px;
     text-decoration: none;
+    width: 150px;
+}
+.add-step-btn:hover, .add-step-btn:focus {
+	transform: rotate(1deg);
+	-webkit-transform: rotate(1deg);
+}
+.add-step-btn:focus {
+	transform: translate(0px,2px);
+	-webkit-transform: translate(0px,2px); 
 }
 .step-number {
     background: none repeat scroll 0 0 rgba(27, 117, 187, 0.6);
@@ -457,9 +471,13 @@ input:hover, input:focus {border-color: #1B75BB;}
     background-image: url("../images/SC_new_button_home.png");
     padding: 11px 18px;
 }
-.callout-link:hover, .navlink:hover {
+.callout-link:hover, .navlink:hover, .add-step-btn:hover {
 opacity: .9;
 } 
+.submit-btn:hover {
+	background-color: #B65724;
+}
+
 @media (max-width: 991px) {
   .callout-h1 {
     font-size: 40px;

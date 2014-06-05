@@ -495,7 +495,6 @@ opacity: .9;
 .submit-btn:hover {
 	background-color: #B65724;
 }
-
 @media (max-width: 991px) {
   .callout-h1 {
     font-size: 40px;

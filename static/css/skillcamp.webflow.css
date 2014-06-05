@@ -425,12 +425,21 @@ textarea:focus {width: 75%; height: 200px;}
 .submit-btn {
     background: none repeat scroll 0 0 #833627;
     border: medium none;
-    border-radius: 3px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.15);
     color: #FFFFFF;
     font-family: montserrat;
-    font-weight: 600;
+    font-size: 20px;
+    margin-top: 16px;
     padding: 10px;
-    width: 30%;
+    transition: all 0.1s ease 0s;
+    -webkit-transition: all 0.1s ease 0s;
+    width: 35%;
+}
+.submit-btn:active {
+    transform: translate(1px, 4px);
+    -webkit-transform: translate(1px, 4px);
+    box-shadow: none;
 }
 .add-step-btn {
     background-image: url("../images/SC_browse_button.png");

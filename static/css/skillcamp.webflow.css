@@ -305,8 +305,8 @@ p {
 }
 .dot {
   display: inline-block;
-  padding-right: 8px;
-  padding-left: 8px;
+  padding-right: 6px;
+  padding-left: 6px;
   font-family:'Open Sans', sans-serif;
   color: #833627;
   font-size: 18px;
@@ -494,6 +494,10 @@ opacity: .9;
 } 
 .submit-btn:hover {
 	background-color: #B65724;
+}
+.footer-logo {
+    float: right;
+    padding-top: 20px;
 }
 @media (max-width: 991px) {
   .callout-h1 {

@@ -12,19 +12,19 @@ Code for America fellows undergo intense training in January before they head to
 
 ## Running the code locally
 
-Skillcamp is a Python Flask application. Get started by [preparing your Python environment](https://github.com/codeforamerica/howto/blob/master/Python-Virtualenv.md) and installing [dependencies from `requirements.txt`](https://github.com/codeforamerica/howto/blob/master/Python-Virtualenv.md#install-packages).
+Skillcamp is a Python Flask application.
 
-Next, prepare a [local PostgreSQL database](https://github.com/codeforamerica/howto/blob/master/PostgreSQL.md).
-
-Skillcamp uses the environment variable `DATABASE_URL` to connect to PostgreSQL; it will look something like this:
-
-    postgres://username:password@hostname:5432/databasename
+1.  Get started by [preparing your Python environment](https://github.com/codeforamerica/howto/blob/master/Python-Virtualenv.md) and installing [dependencies from `requirements.txt`](https://github.com/codeforamerica/howto/blob/master/Python-Virtualenv.md#install-packages).
+2.  Next, prepare a [local PostgreSQL database](https://github.com/codeforamerica/howto/blob/master/PostgreSQL.md).
+3.  Skillcamp uses the environment variable `DATABASE_URL` to connect to PostgreSQL; it will look something like this:
+    
+        postgres://username:password@hostname:5432/databasename
 
 ### Run app
 
-``` bash
-python app.py
-```
+When testing, run the application like this:
+
+    $ DATABASE_URL=postgres://username:password@hostname:5432/databasename python app.py
 
 =========
 1. setup python/pip/virtualenv
